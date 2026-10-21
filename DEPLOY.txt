@@ -1,0 +1,15 @@
+Operator desk — deploy this folder on Vercel.
+
+1. Unzip, then import the folder as a new Vercel project (or push it to a Git repo and import that).
+2. Leave the output directory empty. The build writes Vercel's .vercel/output itself.
+3. Build command: npm run build
+   Install command is already in vercel.json.
+4. Add an environment variable named SUPRA_PRIVATE_KEY.
+   Value: the wallet's 32-byte hex private key (64 hex characters, optional 0x).
+   Do not commit the key. Do not paste it into the page.
+5. Optional: DATABASE_URL for a Postgres database so live positions survive restarts.
+   Without it, the server uses a temporary database and live trades will not stick on Vercel.
+6. After the first successful deploy, the page shows the practice clock immediately.
+   Real Token Studio buys start on the next minute, only for coins created after the bot arms, and only if the wallet has SUPRA.
+
+The practice clock does not spend funds. Live buys are 50,000 SUPRA on new Token Studio deploys.
