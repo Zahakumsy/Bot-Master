@@ -1,4 +1,10 @@
+
 {
   "installCommand": "npm install --omit=dev --no-audit --no-fund",
-  "crons": [{ "path": "/api/operator/tick", "schedule": "0 0 * * *" }]
+  "crons": [
+    {
+      "path": "/api/operator/tick",
+      "schedule": "0 0 * * *"
+    }
+  ]
 }
