@@ -177,7 +177,7 @@ export default defineConfig(({ command, isPreview }) => ({
             serverDir: "./server",
             experimental: { tasks: true },
             scheduledTasks: {
-              "* * * * *": ["operator:tick"],
+              "0 0 * * *": ["operator:tick"],
             },
           }),
         ]
